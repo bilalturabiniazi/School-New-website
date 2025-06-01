@@ -1,0 +1,313 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: rgb(33, 33, 236);
+    line-height: 15vmin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Logo */
+.logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    background-size: cover;
+}
+
+/* Header Text */
+.h21 {
+    color: orange;
+    font-size: 2rem;
+}
+
+.h31 {
+    border-right: 2px solid white;
+    height: 4rem;
+    color: white;
+    padding-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Header Items */
+.header-items {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    list-style-type: none;
+}
+
+.header-items a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.header-items a:hover {
+    color: orange;
+}
+
+/* Search Button */
+.searchBtn {
+    height: 1.5rem;
+    width: 9rem;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+/* Sidebar */
+.sidbar {
+    height: 580px;
+    width: 24vmin;
+    background-color: rgb(63, 63, 239);
+    padding: 10px;
+}
+
+/* Layout: Flex container for sidebar + main */
+.page-layout {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+/* Main menu */
+.main-menu,
+.Staff-main-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 1.4rem;
+    padding-left: 2px;
+    border: 1px solid orange;
+    height: auto;
+    width: 140px;
+    border-radius: 40px;
+    margin: 7px 0 5px 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.main-menu > a,
+.Staff-main-menu > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+.main-menu > a:hover,
+.Staff-main-menu > a:hover {
+    color: orange;
+}
+
+/* Submenu with border-radius */
+.submenu,
+.Staff-sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, padding 0.5s ease;
+    flex-direction: column;
+    background-color: #ccc;
+    padding: 0 10px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.main-menu:hover .submenu,
+.Staff-main-menu:hover .Staff-sub-menu {
+    max-height: 500px;
+    padding: 10px;
+}
+
+.submenu a,
+.Staff-sub-menu a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+    height: 30px;
+    width: 90px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.submenu a:hover,
+.Staff-sub-menu a:hover {
+    background-color: #bbb;
+}
+
+/* Other menus */
+.Sci-main-menu a,
+.comp-main-menu a,
+.book-main-menu a,
+.can-main-menu a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 10px 12px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    border: 1px solid orange;
+    height: 30px;
+    width: 120px;
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.Sci-main-menu a:hover,
+.comp-main-menu a:hover,
+.book-main-menu a:hover,
+.can-main-menu a:hover {
+    color: orange;
+}
+
+/* Main content */
+.main-content {
+    background-image: url("./Images/door\ and\ students.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay inside content */
+.content-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+/* Buttons */
+.apply, .question {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply {
+    background-color: green;
+    color: white;
+}
+
+.question {
+    background-color: orange;
+    color: white;
+}
+
+.ser-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    background-color: rgb(63, 63, 239);
+}
+
+.ser-menu1,
+.ser-menu2,
+.ser-menu3 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    margin: 0px 100px;
+    border: 2px solid lightblue;
+    border-radius: 15px;
+    padding: 20px 50px;
+    background-color: lightblue;
+}
+
+/* ✅ Footer fixes */
+footer {
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto; /* ✅ Ensures footer stays at bottom */
+}
+
+.footer-main-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: start;
+    margin: 0px;
+}
+
+.footer-h2,
+.footer-main-menu2 {
+    flex: 1;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+.footer-logo {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+}
+
+.footer-h2-a {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.find-h2 {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: blue;
+}
+
+.f-name,
+.A-no,
+.address {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+/* Address block */
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(215, 93, 93);
+    color: white;
+    margin: 0px;
+    width: 100%;
+}
